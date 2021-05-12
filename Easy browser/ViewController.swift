@@ -9,10 +9,12 @@ import UIKit
 import WebKit
 
 class ViewController: UIViewController, WKNavigationDelegate {
-
+    
+    // MARK: - VARIABLES -
     var websites = ["apple.com", "hackingwithswift.com"]
     var webView: WKWebView!
     
+    //MARK: - LIFE CYCLE -
     override func loadView() {
         webView = WKWebView()
         webView.navigationDelegate = self
@@ -21,14 +23,11 @@ class ViewController: UIViewController, WKNavigationDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        guard let url = URL(string: "https://" + websites[0]) else { return }
-        webView.load(URLRequest(url: url))
-        webView.allowsBackForwardNavigationGestures = true
-        
+        self.getService()
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Open", style: .plain, target: self, action: #selector(openTapped))
     }
     
+    // MARK: - IBACTIONS -
     @objc func openTapped() {
         let ac = UIAlertController(title: "Open page...", message: nil, preferredStyle: .actionSheet)
         for website in websites {
@@ -37,11 +36,6 @@ class ViewController: UIViewController, WKNavigationDelegate {
         ac.addAction(UIAlertAction(title: "cancel", style: .cancel))
         ac.popoverPresentationController?.barButtonItem = self.navigationItem.rightBarButtonItem
         present(ac, animated: true)
-    }
-    
-    func openPage(action: UIAlertAction) {
-        let url = URL(string: "https://" + action.title!)!
-        webView.load(URLRequest(url: url))
     }
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
@@ -56,6 +50,19 @@ class ViewController: UIViewController, WKNavigationDelegate {
             }
         }
         decisionHandler(.cancel)
+    }
+}
+
+extension ViewController {
+    func getService() {
+        guard let url = URL(string: "https://" + websites[0]) else { return }
+        webView.load(URLRequest(url: url))
+        webView.allowsBackForwardNavigationGestures = true
+    }
+    
+    func openPage(action: UIAlertAction) {
+        let url = URL(string: "https://" + action.title!)!
+        webView.load(URLRequest(url: url))
     }
 }
 
