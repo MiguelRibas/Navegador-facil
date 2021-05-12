@@ -13,7 +13,6 @@
 		DD15ADAE264AAE60004BEEAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD15ADAC264AAE60004BEEAF /* Main.storyboard */; };
 		DD15ADB0264AAE60004BEEAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD15ADAF264AAE60004BEEAF /* Assets.xcassets */; };
 		DD15ADB3264AAE60004BEEAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD15ADB1264AAE60004BEEAF /* LaunchScreen.storyboard */; };
-		DD15ADBC264C070A004BEEAF /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD15ADBB264C070A004BEEAF /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		DD15ADAF264AAE60004BEEAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD15ADB2264AAE60004BEEAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD15ADB4264AAE60004BEEAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DD15ADBB264C070A004BEEAF /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +63,6 @@
 				DD15ADAF264AAE60004BEEAF /* Assets.xcassets */,
 				DD15ADB1264AAE60004BEEAF /* LaunchScreen.storyboard */,
 				DD15ADB4264AAE60004BEEAF /* Info.plist */,
-				DD15ADBB264C070A004BEEAF /* Service.swift */,
 			);
 			path = "Easy browser";
 			sourceTree = "<group>";
@@ -141,7 +138,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD15ADAB264AAE60004BEEAF /* ViewController.swift in Sources */,
-				DD15ADBC264C070A004BEEAF /* Service.swift in Sources */,
 				DD15ADA7264AAE60004BEEAF /* AppDelegate.swift in Sources */,
 				DD15ADA9264AAE60004BEEAF /* SceneDelegate.swift in Sources */,
 			);
